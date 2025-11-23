@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZERON.EPIN - Çekiliş Sistemi</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <header>
+        <div class="logo">ZERON.EPIN</div>
+        <div class="user-area">
+            <div id="user-info" class="user-info" style="display:none;">
+                <span id="user-display-name"></span>
+                <a href="/auth/logout" class="logout-btn">Çıkış Yap</a>
+            </div>
+            <a href="/auth/google" id="login-btn" class="login-btn">Google ile Giriş Yap</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="admin-panel" class="admin-panel" style="display:none;">
+            <h2>⚙️ Yönetici Paneli</h2>
+            
+            <div class="admin-card">
+                <h3>Yeni Çekiliş Oluştur</h3>
+                <form id="create-cekilis-form">
+                    <input type="text" id="title" placeholder="Başlık (Örn: PUBG 600 UC)" required>
+                    <textarea id="description" placeholder="Açıklama" required></textarea>
+                    <input type="text" id="imageUrl" placeholder="Görsel URL (İsteğe bağlı)">
+                    <input type="datetime-local" id="endDate" required>
+                    <button type="submit" class="create-btn">Çekilişi Oluştur</button>
+                </form>
+            </div>
+
+            <div class="admin-card">
+                <h3>Çekilişleri Yönet ve Kazanan Seç</h3>
+                <div id="admin-cekilis-list">
+                    <p>Aktif çekilişler listeleniyor...</p>
+                </div>
+            </div>
+        </section>
+
+        <div id="donation-area" class="donation-area">
+            <h2>💰 Bizi Destekleyin</h2>
+            <p>Projenin devamlılığı ve daha büyük çekilişler için bizi destekleyebilirsiniz:</p>
+            <div class="donation-links">
+                <a href="[PAYPAL BAĞIŞ LİNKİNİZ]" target="_blank" class="donate-btn paypal-btn">PayPal ile Bağış Yap</a>
+                <a href="[ININAL HESAP BİLGİLERİNİZ]" target="_blank" class="donate-btn ininal-btn">Ininal İle Destekle</a>
+            </div>
+        </div>
+
+        <div id="cekilis-listesi" class="cekilis-listesi">
+            <h2>✨ Aktif Çekilişler</h2>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
